@@ -1,4 +1,7 @@
 
+<%@page import="Model.Nino"%>
+<%@page import="java.util.ArrayList"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -11,7 +14,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>Alta institución</title>
+<title>Alta instituciÃ³n</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -52,7 +55,7 @@
               
                 <li class="current_page_item"><a href="miinstitucion.jsp">Mi Institucion</a></li>
                 
-                <li><a href="contact.html">Alta de Niños</a></li>
+                <li><a href="contact.html">Alta de NiÃ±os</a></li>
         
                 
                  <li><a href="index.html">Salir</a></li>
@@ -71,7 +74,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Editar Niño</h2>
+	<h2 class="page-section-title">Editar NiÃ±o</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -92,22 +95,22 @@
 
                     <fieldset>       
                         <legend>Datos generales</legend>
-                        <label for="nombre_nino"><strong>Nombre(s): &nbsp;<strong></label>
-                        <input name="nombre_nino" value="Rolando" type="text"size="20" /><br><br>
+                        <label for="nombre_nino"><strong>Nombre(s): &nbsp;<strong></label>                      
+                        <input name="nombre_nino" value="${ninoTemp.nombre_nino}" type="text"size="20" /><br><br>                        
                         
                         <label for="ap_nino"><strong>Apellido Paterno: &nbsp;<strong></label>
-                        <input name="ap_nino" value="Hernández" type="text"size="20" /><br><br>
+                        <input name="ap_nino" value="HernÃ¡ndez" type="text"size="20" /><br><br>
                         
                         <label for="am_nino"><strong>Apellido Materno: &nbsp;<strong></label>
                         <input name="am_nino" value="Torres" type="text"size="20" /><br><br>
         
-                        <label for="edad_cron">Edad Cronológica: &nbsp;</label>
+                        <label for="edad_cron">Edad CronolÃ³gica: &nbsp;</label>
                         <input name= "edad_cron" value="22" type="number" id="edad_cron"><br><br>
                      
                         <label for="edadMental">Edad Mental: &nbsp;</label>
                         <input name= "edad_men_det" value="22" type="number" id="edadMental"><br><br>
                         
-                        <label for="id_inst">Institución ID: &nbsp;</label>
+                        <label for="id_inst">InstituciÃ³n ID: &nbsp;</label>
                         <input name= "id_inst" type="number" id="id_inst"><br><br>
 
                         <label for="id_res">Responsable ID: &nbsp;</label>
@@ -131,23 +134,23 @@
                          <br><br>
 
                         <label>Discapacidad: </label><br>
-                        <input type="checkbox" name="discapacidad_det" value="sindromeDown"> <label>Síndrome de Down</label><br>
+                        <input type="checkbox" name="discapacidad_det" value="sindromeDown"> <label>SÃ­ndrome de Down</label><br>
                         <input type="checkbox" name="discapacidad_det" value="problemaNeuromotor">  <label>Problemas Neuromotores</label><br>
                         <input type="checkbox" name="discapacidad_det" value="deficienciaMental">  <label>Deficiencia Mental</label><br>
                         <input type="checkbox" name="discapacidad_det" value="silente">  <label>Silente</label><br>
-                        <input type="checkbox" name="discapacidad_det" value="paralisisCerebral">  <label>Parálisis Cerebral</label><br>
+                        <input type="checkbox" name="discapacidad_det" value="paralisisCerebral">  <label>ParÃ¡lisis Cerebral</label><br>
                         <input type="checkbox" name="discapacidad_det" value="autismo">  <label>Autismo</label><br>
                         <input type="checkbox" name="discapacidad_det" value="otra">  <label>Otra</label><br><br>
                     </fieldset>   
 
                     <fieldset>       
-                        <legend>Datos médicos: </legend>
-                    <label>¿Está bajo tratamiento médico?</label><br>
-                        <input type="radio" name="tratamiento_det" value="si"> <label><strong>Sí</strong></label><br>
+                        <legend>Datos mÃ©dicos: </legend>
+                    <label>Â¿EstÃ¡ bajo tratamiento mÃ©dico?</label><br>
+                        <input type="radio" name="tratamiento_det" value="si"> <label><strong>SÃ­</strong></label><br>
                        <input type="radio" name="tratamiento_det" value="no"> <label><strong>No</strong></label><br><br>
 
-                       <label>¿Usa silla de ruedas?</label><br>
-                       <input type="radio" name="silla_det" value="si"> <label><strong>Sí</strong></label><br>
+                       <label>Â¿Usa silla de ruedas?</label><br>
+                       <input type="radio" name="silla_det" value="si"> <label><strong>SÃ­</strong></label><br>
                        <input type="radio" name="silla_det" value="no"> <label><strong>No</strong></label><br><br>
 
 
@@ -155,11 +158,11 @@
 
                     <fieldset>
                         <legend>En caso de emergencia, </legend>
-                      <label>¿Cuál sería el hospital más adecuado para trasladarlo?</label>
+                      <label>Â¿CuÃ¡l serÃ­a el hospital mÃ¡s adecuado para trasladarlo?</label>
                         <input name="hospital_con" value="Angeles" type="text"size="40" /><br><br>
                         <label>Llamar a: </label><br>
-                        <input type="radio" name="parentesco_con" value="papa"> <label><strong>Papá</strong></label><br>
-                        <input type="radio" name="parentesco_con" value="mama"> <label><strong>Mamá</strong></label><br>
+                        <input type="radio" name="parentesco_con" value="papa"> <label><strong>PapÃ¡</strong></label><br>
+                        <input type="radio" name="parentesco_con" value="mama"> <label><strong>MamÃ¡</strong></label><br>
                         <input type="radio" name="parentesco_con" value="otro"> <label><strong>Otro:&nbsp </strong></label><br><br>
                         <label for ="nombre_con"<strong>Nombre: &nbsp;<strong></label>
                         <input name="nombre_con" value="Arely" type="text" size="40"/><br><br>
@@ -171,7 +174,7 @@
                         <input name="of_con" value="8717321113" type="text"size="40"/><br><br>
                   </fieldset>
                   <!--fieldset>
-                    <label for="responsable"><strong>Responsable de la institución:&nbsp;<strong></label>
+                    <label for="responsable"><strong>Responsable de la instituciÃ³n:&nbsp;<strong></label>
                     <input name="responsable" type="text"size="40"/><br><br>
                     <label for="responsablecelular"><strong>Celular: &nbsp;<strong></label>
                     <input name="responsablecelular" type="text"size="40"/><br><br>
@@ -179,7 +182,7 @@
 
                     <legend>Playera: </legend>
                     <label>Tipo</label><br>
-                    <input type="radio" name="modeloplayera_nino" value="nino"> <label><strong>Niño</strong>&nbsp;&nbsp</label>
+                    <input type="radio" name="modeloplayera_nino" value="nino"> <label><strong>NiÃ±o</strong>&nbsp;&nbsp</label>
                     <input type="radio" name="modeloplayera_nino" value="adulto"> <label><strong>Adulto</strong>&nbsp;&nbsp</label><br><br>
                     <label>Modelo</label><br>
                     <input type="radio" name="tallaplayera_nino" value="ch"> <label><strong>CH</strong>&nbsp;&nbsp</label>
@@ -225,7 +228,7 @@
 <div class="row">
 <div class="col-md-12">
 
-<p>©2014 DAW- Arely, Rolando y Carlos</p>
+<p>Â©2014 DAW- Arely, Rolando y Carlos</p>
 
 <ul>
 <li><a href="https://www.facebook.com/supercompucampo.itesm" target="_blank"><i class="fa fa-facebook"></i></a></li>
