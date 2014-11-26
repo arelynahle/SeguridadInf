@@ -73,7 +73,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Mi Institución</h2>
+	<h2 class="page-section-title">LALALAMi Institución</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
