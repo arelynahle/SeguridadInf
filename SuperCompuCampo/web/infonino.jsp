@@ -130,7 +130,7 @@
         </table>
                 <br>
         <br>
-        <a href="NinoServlet?opcion=4"><button>Editar Información</button></a>
+        <a href="editarnino.jsp"><button>Editar Información</button></a>
 
 </div><!-- col-md-6-->
 

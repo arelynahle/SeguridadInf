@@ -108,6 +108,7 @@ public class NinoDAO {
 		            // get rows data{
 		            while (results.next()) {
 			           Nino nino = new Nino();
+                                   nino.setid_nino(results.getInt("id_nino"));
                                    nino.setnombre_nino(results.getString("nombre_nino"));
                                    nino.setap_nino(results.getString("ap_nino"));
                                    nino.setam_nino(results.getString("am_nino"));
@@ -140,6 +141,7 @@ public class NinoDAO {
 			  		  
 		            while (results.next()) {	            	
 			           nino = new Nino();
+                                   nino.setid_nino(results.getInt("id_nino"));
                                    nino.setnombre_nino(results.getString("nombre_nino"));
                                    nino.setap_nino(results.getString("ap_nino"));
                                    nino.setam_nino(results.getString("am_nino"));
