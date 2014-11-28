@@ -1,5 +1,5 @@
+
 <%@page import="Model.Nino"%>
-<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>Niños Inscritos</title>
+<title>Alta institución</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="js/prettyphoto/css/prettyPhoto.css" type="text/css" media="all" />
-
+ 
 </head>
 
 <body>
@@ -43,7 +43,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="clearfix">
-            <div id="logo"><img class="img-responsive" src="images/logo.png"/></div>
+            <div id="logo"><img class="img-responsive" src="images/logo.png" alt=""/></div>
             
             <nav class="navbar navbar-custom" role="navigation">
             <div class="navbar-header">
@@ -73,7 +73,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Consulta de Niños</h2>
+	<h2 class="page-section-title">Editar Niño</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -85,14 +85,12 @@
 <div class="row">
 
 <div class="col-sm-6 col-md-6">
+
+<div id="contact-form-holder">
+
     
-<a href="NinoServlet?opcion=3"><button>Regresar</button></a>
-<br>
-<br>    
-
-<h3 class="widgettitle">Información del niño</h3>
-
-   <form id="altanino" name="" method="get"  action="NinoServlet">
+    
+    <form id="altanino" name="" method="get"  action="NinoServlet">
 
                     <h4>Llena los siguientes campos, por favor.</h4>
 
@@ -102,13 +100,13 @@
                         <input name="nombre_nino" value="${ninoTemp.nombre_nino}" type="text"size="20" /><br><br>                        
                         
                         <label for="ap_nino"><strong>Apellido Paterno: &nbsp;<strong></label>
-                        <input name="ap_nino" value="Hernández" type="text"size="20" /><br><br>
+                        <input name="ap_nino" value="${ninoTemp.ap_nino}" type="text"size="20" /><br><br>
                         
                         <label for="am_nino"><strong>Apellido Materno: &nbsp;<strong></label>
-                        <input name="am_nino" value="Torres" type="text"size="20" /><br><br>
+                        <input name="am_nino" value="${ninoTemp.am_nino}" type="text"size="20" /><br><br>
         
                         <label for="edad_cron">Edad Cronológica: &nbsp;</label>
-                        <input name= "edad_cron" value="22" type="number" id="edad_cron"><br><br>
+                        <input name= "edad_cron" value="${ninoTemp.edad_cron}" type="number" id="edad_cron"><br><br>
                      
                         <label for="edadMental">Edad Mental: &nbsp;</label>
                         <input name= "edad_men_det" value="22" type="number" id="edadMental"><br><br>
@@ -202,10 +200,21 @@
                 </tr>
 
                 </form>
+	</div><!-- contact-form-holder-->
+    
+    <div id="output-contact"></div>
+
 
 </div><!-- col-md-6-->
 
-</div><!--row-->
+
+
+
+<div class="col-sm-6 col-md-6">
+
+</div><!--col-md-6-->
+
+</div><!-- row -->
 
 </div><!-- container-->
 

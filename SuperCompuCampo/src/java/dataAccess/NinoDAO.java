@@ -61,6 +61,28 @@ public class NinoDAO {
         }
 
     }
+    
+    public void updateNino(Nino nino) {
+        try {
+            statement = connection.prepareStatement("UPDATE nino SET nombre_nino=? ,ap_nino=? ,am_nino=? ,edad_cron=? ,modeloplayera_nino=? ,tallaplayera_nino=? WHERE id_nino = ?");
+
+            synchronized (statement) {
+                statement.setString(1, nino.getnombre_nino());
+                statement.setString(2, nino.getap_nino());
+                statement.setString(3, nino.getam_nino());
+                statement.setInt(4, nino.getedad_cron());
+                statement.setString(5, nino.getmodeloplayera_nino());
+                statement.setString(6, nino.gettallaplayera_nino());
+                statement.setInt(7, nino.getid_nino());
+
+                statement.executeUpdate();
+            }
+            statement.close();
+        } catch (SQLException sqle) {
+            System.out.println(sqle);
+        }
+
+    }
 
     public void addDet(Detalle detalle) {
         try {

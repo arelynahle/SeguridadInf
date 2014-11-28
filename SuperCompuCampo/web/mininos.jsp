@@ -96,7 +96,7 @@
         <form action="NinoServlet" method="get">
             <table cellspacing="5" border="0">
                 <tr>
-                    <td align="right">Nombre:</td>
+                    <td align="right">Id:</td>
                     <td><input type="text" name="id_nino"></td>
                     <td><input type="submit" value="Buscar"></td>
                 </tr>

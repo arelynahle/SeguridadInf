@@ -196,7 +196,7 @@
                    </p>
                    
                 <tr>
-                    <td><input type="hidden" value="1" name="opcion" /></td>
+                    <td><input type="hidden" value="4" name="opcion" /></td>
                 </tr>
 
                 </form>
