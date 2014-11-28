@@ -1,6 +1,5 @@
 
 <%@page import="Model.Nino"%>
-<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -89,6 +88,8 @@
 
 <div id="contact-form-holder">
 
+    
+    
     <form id="altanino" name="" method="get"  action="NinoServlet">
 
                     <h4>Llena los siguientes campos, por favor.</h4>
@@ -99,13 +100,13 @@
                         <input name="nombre_nino" value="${ninoTemp.nombre_nino}" type="text"size="20" /><br><br>                        
                         
                         <label for="ap_nino"><strong>Apellido Paterno: &nbsp;<strong></label>
-                        <input name="ap_nino" value="Hernández" type="text"size="20" /><br><br>
+                        <input name="ap_nino" value="${ninoTemp.ap_nino}" type="text"size="20" /><br><br>
                         
                         <label for="am_nino"><strong>Apellido Materno: &nbsp;<strong></label>
-                        <input name="am_nino" value="Torres" type="text"size="20" /><br><br>
+                        <input name="am_nino" value="${ninoTemp.am_nino}" type="text"size="20" /><br><br>
         
                         <label for="edad_cron">Edad Cronológica: &nbsp;</label>
-                        <input name= "edad_cron" value="22" type="number" id="edad_cron"><br><br>
+                        <input name= "edad_cron" value="${ninoTemp.edad_cron}" type="number" id="edad_cron"><br><br>
                      
                         <label for="edadMental">Edad Mental: &nbsp;</label>
                         <input name= "edad_men_det" value="22" type="number" id="edadMental"><br><br>
