@@ -98,7 +98,7 @@ public class NinoServlet extends HttpServlet {
         
          else if (opcion == 4)
         {
-            //int id_nino = Integer.parseInt(request.getParameter("id_nino"));
+            int id_nino = Integer.parseInt(request.getParameter("id_nino"));
             String nombre_nino = request.getParameter("nombre_nino");
             String ap_nino = request.getParameter("ap_nino");
             String am_nino = request.getParameter("am_nino");
@@ -133,7 +133,7 @@ public class NinoServlet extends HttpServlet {
             request.setAttribute("conTemp",contacto);
             
             
-            Nino ninoNuevo = new Nino (nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
+            Nino ninoNuevo = new Nino  (id_nino, nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
             dao.updateNino(ninoNuevo);
             request.setAttribute("ninoTemp", ninoNuevo);
             address = "displayNewMember.jsp";

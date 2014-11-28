@@ -15,6 +15,16 @@ public class Nino {
         this.modeloplayera_nino = modeloplayera_nino;
         this.tallaplayera_nino = tallaplayera_nino;
     }
+        public Nino (int id_nino, String nombre_nino, String ap_nino, String am_nino, int edad_cron, String modeloplayera_nino, String tallaplayera_nino) {
+
+        this.id_nino = id_nino;
+        this.nombre_nino = nombre_nino;
+        this.ap_nino = ap_nino;
+        this.am_nino = am_nino;
+        this.edad_cron = edad_cron;
+        this.modeloplayera_nino = modeloplayera_nino;
+        this.tallaplayera_nino = tallaplayera_nino;
+    }
 
     public Nino() {
     }

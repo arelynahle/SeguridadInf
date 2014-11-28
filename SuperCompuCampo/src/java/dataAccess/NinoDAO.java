@@ -64,7 +64,7 @@ public class NinoDAO {
     
     public void updateNino(Nino nino) {
         try {
-            statement = connection.prepareStatement("UPDATE nino SET nombre_nino=? ,ap_nino=? ,am_nino=? ,edad_cron=? ,modeloplayera_nino=? ,tallaplayera_nino=? WHERE id_nino = ?");
+            statement = connection.prepareStatement("UPDATE nino SET nombre_nino=? ,ap_nino=? ,am_nino=? ,edad_cron=? ,modeloplayera_nino=? ,tallaplayera_nino=? WHERE id_nino =?");
 
             synchronized (statement) {
                 statement.setString(1, nino.getnombre_nino());
@@ -74,8 +74,6 @@ public class NinoDAO {
                 statement.setString(5, nino.getmodeloplayera_nino());
                 statement.setString(6, nino.gettallaplayera_nino());
                 statement.setInt(7, nino.getid_nino());
-
-                statement.executeUpdate();
             }
             statement.close();
         } catch (SQLException sqle) {

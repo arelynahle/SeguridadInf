@@ -94,7 +94,9 @@
 
                     <h4>Llena los siguientes campos, por favor.</h4>
 
-                    <fieldset>       
+                    <fieldset>      
+                        <input name="id_nino" value="${ninoTemp.id_nino}" type="hidden"size="20" />
+                        
                         <legend>Datos generales</legend>
                         <label for="nombre_nino"><strong>Nombre(s): &nbsp;<strong></label>                      
                         <input name="nombre_nino" value="${ninoTemp.nombre_nino}" type="text"size="20" /><br><br>                        
