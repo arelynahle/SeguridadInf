@@ -62,7 +62,6 @@ public class LoginDAO {
                     login.setnombre_usu(results.getString("nombre_usu"));
                     login.setcontrasena_res(results.getString("contrasena_usu"));
                 }
-
             }
             statement.close();
         } catch (SQLException sqle) {

@@ -97,7 +97,7 @@
             <table cellspacing="5" border="0">
                 <tr>
                     <td align="right">Nombre:</td>
-                    <td><input type="text" name="nombre_nino"></td>
+                    <td><input type="text" name="id_nino"></td>
                     <td><input type="submit" value="Buscar"></td>
                 </tr>
                 <tr>

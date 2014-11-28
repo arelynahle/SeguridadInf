@@ -11,6 +11,7 @@ import Model.Responsable;
 import Model.Institucion;
 import Model.Contacto;
 import Model.Detalle;
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 
 public class NinoDAO {
 
@@ -129,11 +130,11 @@ public class NinoDAO {
 		    return ninoList;
 	   }
         
-        public Nino searchNino(String nombre_nino) {	
+        public Nino searchNino(int id_nino) {	
 		    Nino nino = null;
 		    try {
-		         statement = connection.prepareStatement("SELECT * FROM nino WHERE nombre_nino = ?");	   
-		         statement.setString(1, nombre_nino);
+		         statement = connection.prepareStatement("SELECT * FROM nino WHERE id_nino = ?");	   
+		         statement.setInt(1, id_nino);
 		         // obtain user
 		         synchronized(statement) {
 		            ResultSet results = statement.executeQuery();

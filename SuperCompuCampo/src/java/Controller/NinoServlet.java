@@ -72,8 +72,8 @@ public class NinoServlet extends HttpServlet {
         }
         else if (opcion==2)
          {
-         String nombre_nino =request.getParameter("nombre_nino");
-            Nino ninoNuevo = dao.searchNino(nombre_nino);
+         int id_nino =Integer.parseInt(request.getParameter("id_nino"));
+            Nino ninoNuevo = dao.searchNino(id_nino);
             //String titulo = null;
             if (ninoNuevo==null){
                 //titulo="User not found";
