@@ -132,8 +132,7 @@ public class NinoServlet extends HttpServlet {
             dao.addCon(contacto);
             request.setAttribute("conTemp",contacto);
             
-            
-            Nino ninoNuevo = new Nino  (id_nino, nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
+            Nino ninoNuevo = new Nino  (id_nino,nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
             dao.updateNino(ninoNuevo);
             request.setAttribute("ninoTemp", ninoNuevo);
             address = "displayNewMember.jsp";

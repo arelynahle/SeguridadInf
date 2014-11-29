@@ -88,7 +88,9 @@
 
 <div id="contact-form-holder">
 
-    
+<a href="mininos.jsp"><button>Regresar</button></a>
+<br>
+<br>    
     
     <form id="altanino" name="" method="get"  action="NinoServlet">
 
