@@ -74,19 +74,13 @@ public class NinoServlet extends HttpServlet {
          {
          int id_nino =Integer.parseInt(request.getParameter("id_nino"));
             Nino ninoNuevo = dao.searchNino(id_nino);
-            //String titulo = null;
             if (ninoNuevo==null){
-                //titulo="User not found";
                 address = "noregistrado.jsp";
-
             }
             else{
-                //titulo="You're a kid";
                 address = "editarnino.jsp";
             }
-            //request.setAttribute("titulo", titulo);
             request.setAttribute("ninoTemp", ninoNuevo);
-            //address="displayMember.jsp";
          }
            
          else if (opcion==3)
@@ -112,7 +106,7 @@ public class NinoServlet extends HttpServlet {
             //int id_con = Integer.parseInt(request.getParameter("id_con"));
             //int id_det = Integer.parseInt(request.getParameter("id_det"));
             
-            String discapacidad_det = request.getParameter("discapacidad_det");
+           /* String discapacidad_det = request.getParameter("discapacidad_det");
             int edad_men_det = Integer.parseInt(request.getParameter("edad_men_det"));
             String escolaridad_det = request.getParameter("escolaridad_det");
             String tratamiento_det = request.getParameter("tratamiento_det");
@@ -130,12 +124,12 @@ public class NinoServlet extends HttpServlet {
             request.setAttribute("detTemp",detalle);
             Contacto contacto = new Contacto (hospital_con, parentesco_con, nombre_con, tel_con, cel_con, of_con);
             dao.addCon(contacto);
-            request.setAttribute("conTemp",contacto);
+            request.setAttribute("conTemp",contacto);*/
             
             Nino ninoNuevo = new Nino  (id_nino,nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
             dao.updateNino(ninoNuevo);
             request.setAttribute("ninoTemp", ninoNuevo);
-            address = "displayNewMember.jsp";
+            address = "displayEditedMember.jsp";
         }
            
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
