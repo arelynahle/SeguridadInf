@@ -14,6 +14,16 @@ public class Detalle {
         this.tratamiento_det= tratamiento_det;
         this.silla_det= silla_det;
     }
+    
+        public Detalle(int id_det, String discapacidad_det, int edad_men_det, String escolaridad_det, String tratamiento_det, String silla_det) {
+
+        this.id_det = id_det;
+        this.discapacidad_det = discapacidad_det;
+        this.edad_men_det = edad_men_det;
+        this.escolaridad_det = escolaridad_det;
+        this.tratamiento_det= tratamiento_det;
+        this.silla_det= silla_det;
+    }
 
     public Detalle() {
     }

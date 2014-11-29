@@ -98,6 +98,8 @@
 
                     <fieldset>      
                         <input name="id_nino" value="${ninoTemp.id_nino}" type="hidden"size="20" />
+                        <input name="id_nino" value="${detTemp.id_det}" type="hidden"size="20" />
+
                         
                         <legend>Datos generales</legend>
                         <label for="nombre_nino"><strong>Nombre(s): &nbsp;<strong></label>                      

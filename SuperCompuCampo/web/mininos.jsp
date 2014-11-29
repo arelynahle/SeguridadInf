@@ -98,10 +98,23 @@
                 <tr>
                     <td align="right">Id:</td>
                     <td><input type="text" name="id_nino"></td>
-                    <td><input type="submit" value="Buscar"></td>
+                    <td><input type="submit" value="Editar"></td>
                 </tr>
                 <tr>
                     <td><input type="hidden" value="2" name="opcion" /></td>
+                </tr>
+            </table>
+        </form>
+
+        <form action="NinoServlet" method="get">
+            <table cellspacing="5" border="0">
+                <tr>
+                    <td align="right">Id:</td>
+                    <td><input type="text" name="id_nino"></td>
+                    <td><input type="submit" value="Borrar"></td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" value="5" name="opcion" /></td>
                 </tr>
             </table>
         </form>
