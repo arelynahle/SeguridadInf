@@ -120,16 +120,16 @@
                         <input name= "edad_men_det" value="${detTemp.edad_men_det}" type="number" id="edadMental"><br><br>
                         
                         <label for="id_inst">Institución ID: &nbsp;</label>
-                        <input name= "id_inst" type="number" id="id_inst"><br><br>
+                        <input name= "id_inst" value="${ninoTemp.id_inst}" type="number" id="id_inst"><br><br>
 
                         <label for="id_res">Responsable ID: &nbsp;</label>
-                        <input name= "id_res" type="number" id="id_res"><br><br>
+                        <input name= "id_res" value="${ninoTemp.id_res}" type="number" id="id_res"><br><br>
                         
                         <label for="id_det">Detalles ID: &nbsp;</label>
-                        <input name= "id_det" type="number" id="id_det"><br><br>  
+                        <input name= "id_det" value="${ninoTemp.id_det}" type="number" id="id_det"><br><br>  
                         
                         <label for="id_con">Contacto ID: &nbsp;</label>
-                        <input name= "id_con" type="number" id="id_con"><br><br>                        
+                        <input name= "id_con" value="${ninoTemp.id_con}" type="number" id="id_con"><br><br>                        
                         
                         
                         

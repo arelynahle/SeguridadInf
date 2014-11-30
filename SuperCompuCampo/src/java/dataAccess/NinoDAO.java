@@ -44,7 +44,7 @@ public class NinoDAO {
 
     public void addNino(Nino nino) {
         try {
-            statement = connection.prepareStatement("INSERT INTO nino (nombre_nino,ap_nino,am_nino,edad_cron,modeloplayera_nino,tallaplayera_nino) VALUES(?,?,?,?,?,?)");
+            statement = connection.prepareStatement("INSERT INTO nino (nombre_nino,ap_nino,am_nino,edad_cron,modeloplayera_nino,tallaplayera_nino,id_inst,id_res,id_con,id_det) VALUES(?,?,?,?,?,?,?,?,?,?)");
             synchronized (statement) {
                 statement.setString(1, nino.getnombre_nino());
                 statement.setString(2, nino.getap_nino());
@@ -52,6 +52,10 @@ public class NinoDAO {
                 statement.setInt(4, nino.getedad_cron());
                 statement.setString(5, nino.getmodeloplayera_nino());
                 statement.setString(6, nino.gettallaplayera_nino());
+                statement.setInt(7, nino.getid_inst());
+                statement.setInt(8, nino.getid_res());
+                statement.setInt(9, nino.getid_con());
+                statement.setInt(10, nino.getid_det());
 
                 statement.executeUpdate();
             }
@@ -64,7 +68,7 @@ public class NinoDAO {
 
     public void updateNino(Nino nino) {
         try {
-            statement = connection.prepareStatement("UPDATE nino SET nombre_nino=? ,ap_nino=? ,am_nino=? ,edad_cron=? ,modeloplayera_nino=? ,tallaplayera_nino=? WHERE id_nino =?");
+            statement = connection.prepareStatement("UPDATE nino SET nombre_nino=? ,ap_nino=? ,am_nino=? ,edad_cron=? ,modeloplayera_nino=? ,tallaplayera_nino=?, id_inst=?, id_res=?, id_con=?, id_det=? WHERE id_nino =?");
             synchronized (statement) {
                 statement.setString(1, nino.getnombre_nino());
                 statement.setString(2, nino.getap_nino());
@@ -72,7 +76,11 @@ public class NinoDAO {
                 statement.setInt(4, nino.getedad_cron());
                 statement.setString(5, nino.getmodeloplayera_nino());
                 statement.setString(6, nino.gettallaplayera_nino());
-                statement.setInt(7, nino.getid_nino());
+                statement.setInt(7, nino.getid_inst());
+                statement.setInt(8, nino.getid_res());
+                statement.setInt(9, nino.getid_con());
+                statement.setInt(10, nino.getid_det());
+                statement.setInt(11, nino.getid_nino());
                 statement.executeUpdate();
             }
             statement.close();
@@ -120,14 +128,6 @@ public class NinoDAO {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
     /*public Nino deleteNino(int nombre_nino) {
         try {
             statement = connection.prepareStatement("DELETE FROM nino WHERE nombre_nino = ?");
@@ -161,24 +161,6 @@ public class NinoDAO {
         }
     }
     
-        /*public void updateDet(Detalle detalle) {
-        try {
-            statement = connection.prepareStatement("UPDATE detalle SET (discapacidad_det=?,edad_men_det=?,escolaridad_det=?,tratamiento_det=?,silla_det=?) WHERE id_det=?");
-            synchronized (statement) {
-                statement.setString(1, detalle.getdiscapacidad_det());
-                statement.setInt(2, detalle.getedad_men_det());
-                statement.setString(3, detalle.getescolaridad_det());
-                statement.setString(4, detalle.gettratamiento_det());
-                statement.setString(5, detalle.getsilla_det());
-                statement.executeUpdate();
-            }
-            statement.close();
-        } catch (SQLException sqle) {
-            System.out.println(sqle);
-        }
-    }*/
-
-
     public void addCon(Contacto contacto) {
         try {
             statement = connection.prepareStatement("INSERT INTO contacto (hospital_con, parentesco_con, nombre_con, tel_con, cel_con, of_con) VALUES(?,?,?,?,?,?)");
@@ -215,10 +197,10 @@ public class NinoDAO {
                     nino.setedad_cron(results.getInt("edad_cron"));
                     nino.setmodeloplayera_nino(results.getString("modeloplayera_nino"));
                     nino.settallaplayera_nino(results.getString("tallaplayera_nino"));
-                    /* nino.setid_inst(results.getString("id_inst"));
-                     nino.setid_res(results.getString("id_res"));
-                     nino.setid_con(results.getString("id_con"));
-                     nino.setid_det(results.getString("id_det"));*/
+                    nino.setid_inst(results.getInt("id_inst"));
+                     nino.setid_res(results.getInt("id_res"));
+                     nino.setid_con(results.getInt("id_con"));
+                     nino.setid_det(results.getInt("id_det"));
                     ninoList.add(nino);
                 }
             }
@@ -248,6 +230,10 @@ public class NinoDAO {
                     nino.setedad_cron(results.getInt("edad_cron"));
                     nino.setmodeloplayera_nino(results.getString("modeloplayera_nino"));
                     nino.settallaplayera_nino(results.getString("tallaplayera_nino"));
+                    nino.setid_inst(results.getInt("id_inst"));
+                    nino.setid_res(results.getInt("id_res"));
+                    nino.setid_con(results.getInt("id_con"));
+                    nino.setid_det(results.getInt("id_det"));
                 }
             }
             statement.close();

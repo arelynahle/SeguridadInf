@@ -39,10 +39,10 @@ public class NinoServlet extends HttpServlet {
             String tallaplayera_nino = request.getParameter("tallaplayera_nino");
             
             //Otros datos
-            //int id_inst = Integer.parseInt(request.getParameter("id_inst"));
-            //int id_res = Integer.parseInt(request.getParameter("id_res"));
-            //int id_con = Integer.parseInt(request.getParameter("id_con"));
-            //int id_det = Integer.parseInt(request.getParameter("id_det"));
+            int id_inst = Integer.parseInt(request.getParameter("id_inst"));
+            int id_res = Integer.parseInt(request.getParameter("id_res"));
+            int id_con = Integer.parseInt(request.getParameter("id_con"));
+            int id_det = Integer.parseInt(request.getParameter("id_det"));
             
             String discapacidad_det = request.getParameter("discapacidad_det");
             int edad_men_det = Integer.parseInt(request.getParameter("edad_men_det"));
@@ -65,7 +65,7 @@ public class NinoServlet extends HttpServlet {
             request.setAttribute("conTemp",contacto);
             
             
-            Nino ninoNuevo = new Nino (nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
+            Nino ninoNuevo = new Nino (nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino, id_inst, id_res, id_con, id_det);
             dao.addNino(ninoNuevo);
             request.setAttribute("ninoTemp", ninoNuevo);
             address = "displayNewMember.jsp";
@@ -101,10 +101,10 @@ public class NinoServlet extends HttpServlet {
             String tallaplayera_nino = request.getParameter("tallaplayera_nino");
             
             //Otros datos
-            //int id_inst = Integer.parseInt(request.getParameter("id_inst"));
-            //int id_res = Integer.parseInt(request.getParameter("id_res"));
+            int id_inst = Integer.parseInt(request.getParameter("id_inst"));
+            int id_res = Integer.parseInt(request.getParameter("id_res"));
             //int id_con = Integer.parseInt(request.getParameter("id_con"));
-            // int id_det = Integer.parseInt(request.getParameter("id_det"));
+            //int id_det = Integer.parseInt(request.getParameter("id_det"));
             
             int id_det = Integer.parseInt(request.getParameter("id_det"));
             String discapacidad_det = request.getParameter("discapacidad_det");
@@ -129,7 +129,7 @@ public class NinoServlet extends HttpServlet {
             dao.updateCon(contacto);
             request.setAttribute("conTemp",contacto);
             
-            Nino ninoNuevo = new Nino  (id_nino,nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
+            Nino ninoNuevo = new Nino  (id_nino,nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino, id_inst, id_res, id_con, id_det);
             dao.updateNino(ninoNuevo);
             request.setAttribute("ninoTemp", ninoNuevo);
             address = "displayEditedMember.jsp";

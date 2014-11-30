@@ -107,7 +107,7 @@
             </table>
         </form>
 
-    <!--    <form action="NinoServlet" method="get">
+    <form action="NinoServlet" method="get">
             <table cellspacing="5" border="0">
                 <tr>
                     <td align="right">Id:</td>
@@ -118,8 +118,8 @@
                     <td><input type="hidden" value="5" name="opcion" /></td>
                 </tr>
             </table>
-        </form>
-    -->
+    </form>
+    
 
 <h3 class="widgettitle">Lista de niños</h3>
 

@@ -107,6 +107,27 @@
             </tr>
         </table>    
         
+         <br>
+        <h5>IDs</h5>        
+        <table cellspacing="5" cellpadding="5" border="1">
+            <tr>
+                <th>ID Institución</th>
+                <td>${ninoTemp.id_inst}</td>
+            </tr>
+            <tr>
+                <th>ID Responsable</th>
+                <td>${ninoTemp.id_res}</td>
+            </tr>
+            <tr>
+                <th>ID Contacto</th>
+                <td>${ninoTemp.id_con}</td>
+            </tr>
+            <tr>
+                <th>ID Detalle</th>
+                <td>${ninoTemp.id_det}</td>
+            </tr>
+        </table> 
+            
         <br>    
         <h5>Playera</h5>
         <table cellspacing="5" cellpadding="5" border="1">   
@@ -174,9 +195,11 @@
             </tr>             
         </table>
        
-        <br>    
-       
+        <br>
         <a href="contact.html"><button>Registrar Otro Niño</button></a>
+        
+        <br>    
+        <a href="miinstitucion.jsp"><button>Mi Institución</button></a>
 
 </div><!-- col-md-6-->
 

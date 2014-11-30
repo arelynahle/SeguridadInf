@@ -177,7 +177,7 @@
        
         <br>
        
-        <a href="mininos.jsp"><button>Lista de Niños</button></a>
+        <a href="miinstitucion.jsp"><button>Listo</button></a>
 
 </div><!-- col-md-6-->
 

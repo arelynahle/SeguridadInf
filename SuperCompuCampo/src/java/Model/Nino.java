@@ -2,10 +2,10 @@ package Model;
 
 public class Nino {
 
-    private String nombre_nino, ap_nino, am_nino, modeloplayera_nino, tallaplayera_nino, id_inst,id_res, id_con, id_det;
-    private int id_nino,edad_cron;
+    private String nombre_nino, ap_nino, am_nino, modeloplayera_nino, tallaplayera_nino;
+    private int id_nino,edad_cron, id_inst, id_res, id_con, id_det;
 
-    public Nino(String nombre_nino, String ap_nino, String am_nino, int edad_cron, String modeloplayera_nino, String tallaplayera_nino) {
+    public Nino(String nombre_nino, String ap_nino, String am_nino, int edad_cron, String modeloplayera_nino, String tallaplayera_nino, int id_inst, int id_res, int id_con, int id_det) {
 
         this.id_nino = id_nino;
         this.nombre_nino = nombre_nino;
@@ -14,8 +14,12 @@ public class Nino {
         this.edad_cron = edad_cron;
         this.modeloplayera_nino = modeloplayera_nino;
         this.tallaplayera_nino = tallaplayera_nino;
+        this.id_inst = id_inst;
+        this.id_res = id_res;
+        this.id_con = id_con;
+        this.id_det = id_det; 
     }
-        public Nino (int id_nino, String nombre_nino, String ap_nino, String am_nino, int edad_cron, String modeloplayera_nino, String tallaplayera_nino) {
+        public Nino (int id_nino, String nombre_nino, String ap_nino, String am_nino, int edad_cron, String modeloplayera_nino, String tallaplayera_nino, int id_inst, int id_res, int id_con, int id_det) {
 
         this.id_nino = id_nino;
         this.nombre_nino = nombre_nino;
@@ -24,6 +28,10 @@ public class Nino {
         this.edad_cron = edad_cron;
         this.modeloplayera_nino = modeloplayera_nino;
         this.tallaplayera_nino = tallaplayera_nino;
+        this.id_inst = id_inst;
+        this.id_res = id_res;
+        this.id_con = id_con;
+        this.id_det = id_det; 
     }
 
     public Nino() {
@@ -57,19 +65,19 @@ public class Nino {
         return (tallaplayera_nino);
     }
 
-    public String getid_inst() {
+    public int getid_inst() {
         return (id_inst);
     }   
     
-    public String getid_res() {
+    public int getid_res() {
         return (id_res);
     }    
     
-    public String getid_con() {
+    public int getid_con() {
         return (id_con);
     }    
     
-    public String getid_det() {
+    public int getid_det() {
         return (id_det);
     }    
     
@@ -101,19 +109,19 @@ public class Nino {
         this.tallaplayera_nino = tallaplayera_nino;
     }        
 
-    public void setid_inst(String id_inst) {
+    public void setid_inst(int id_inst) {
         this.id_inst=id_inst;
     }
 
-    public void setid_res(String id_res) {
+    public void setid_res(int id_res) {
         this.id_res=id_res;
     }
 
-    public void setid_con(String id_con) {
+    public void setid_con(int id_con) {
         this.id_con=id_con;
     }
 
-    public void setid_det(String id_det) {
+    public void setid_det(int id_det) {
         this.id_det= id_det;
     }
     
