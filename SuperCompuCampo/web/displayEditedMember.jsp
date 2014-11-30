@@ -48,9 +48,9 @@
             <div class="collapse navbar-collapse" id="collapse-navigation">
            <ul class="nav menu-nav">
               
-                <li><a href="miinstitucion.jsp">Mi Institucion</a></li>
+                <li  class="current_page_item"><a href="miinstitucion.jsp">Mi Institucion</a></li>
                 
-                <li class="current_page_item"><a href="contact.html">Alta de Niños</a></li>
+                <li><a href="contact.html">Alta de Niños</a></li>
         
                 
                  <li><a href="index.html">Salir</a></li>
@@ -119,8 +119,9 @@
                 <td>${ninoTemp.tallaplayera_nino}</td>
             </tr> 
         </table>
-            
-        <br>    
+          
+        <br>  
+         <!-- 
         <h5>Detalle</h5>
         <table cellspacing="5" cellpadding="5" border="1">   
             <tr>
@@ -174,9 +175,9 @@
             </tr>             
         </table>
        
-        <br>    
+        <br>-->    
        
-        <a href="contact.html"><button>Registrar Otro Niño</button></a>
+        <a href="mininos.jsp"><button>Lista de Niños</button></a>
 
 </div><!-- col-md-6-->
 

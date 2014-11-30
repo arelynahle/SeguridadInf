@@ -1,8 +1,3 @@
-<%@page import="Model.Nino"%>
-<%@page import="Model.Detalle"%>
-<%@page import="java.util.ArrayList"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -14,7 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>NiÃ±os Inscritos</title>
+<title>¡Cambios exitosos!</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -44,18 +39,18 @@
       <div class="row">
         <div class="col-md-12">
           <div class="clearfix">
-            <div id="logo"><img class="img-responsive" src="images/logo.png"/></div>
+            <div id="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png"/></a></div>
             
             <nav class="navbar navbar-custom" role="navigation">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
             </div>
             <div class="collapse navbar-collapse" id="collapse-navigation">
-            <ul class="nav menu-nav">
+           <ul class="nav menu-nav">
               
-                <li class="current_page_item"><a href="miinstitucion.jsp">Mi Institucion</a></li>
+                <li  class="current_page_item"><a href="miinstitucion.jsp">Mi Institucion</a></li>
                 
-                <li><a href="contact.html">Alta de NiÃ±os</a></li>
+                <li><a href="contact.html">Alta de Niños</a></li>
         
                 
                  <li><a href="index.html">Salir</a></li>
@@ -74,9 +69,7 @@
 
 <section class="page-top wrap">
 
-
-
-<h2 class="page-section-title">NiÃ±os Inscritos</h2>
+	<h2 class="page-section-title">Cambio Exitoso de Institución</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -89,86 +82,109 @@
 
 <div class="col-sm-6 col-md-6">
 
-<a href="miinstitucion.jsp"><button>Regresar</button></a>
-<br>
-<br>
+<h3 class="widgettitle">Cambios exitosos</h3>
 
-<p>Ver detalles de un niÃ±o</p>        
-        <form action="NinoServlet" method="get">
-            <table cellspacing="5" border="0">
-                <tr>
-                    <td align="right">Id:</td>
-                    <td><input type="text" name="id_nino"></td>
-                    <td><input type="submit" value="Editar"></td>
-                </tr>
-                <tr>
-                    <td><input type="hidden" value="2" name="opcion" /></td>
-                </tr>
-            </table>
-        </form>
+<h5>Aquí te presentamos los datos que se editaron</h5>
 
-    <!--    <form action="NinoServlet" method="get">
-            <table cellspacing="5" border="0">
-                <tr>
-                    <td align="right">Id:</td>
-                    <td><input type="text" name="id_nino"></td>
-                    <td><input type="submit" value="Borrar"></td>
-                </tr>
-                <tr>
-                    <td><input type="hidden" value="5" name="opcion" /></td>
-                </tr>
-            </table>
-        </form>
-    -->
-
-<h3 class="widgettitle">Lista de niÃ±os</h3>
-
-
-        <% 
-            ArrayList<Nino> ninoListJSP=(ArrayList<Nino>) request.getAttribute("ninoList");
-        %>
-
-        <table cellspacing="5" cellpadding="5" border="3">
+        <br>
+        <h5>Institución</h5>        
+        <table cellspacing="5" cellpadding="5" border="1">
             <tr>
-                <th>Id</th>
-                <th>Nombre </th>
-                <th>Apellido Paterno</th>
-                <th>Apellido Materno</th>
-                <th>Edad cronolÃ³gica</th>
-                <th>Modelo playera</th>
-                <th>Talla playera</th>
-                <!--<th>Institucion ID</th>                
-                <th>Responsable ID</th>
-                <th>Contacto ID</th>
-                <th>Detalles ID</th>-->
+                <td>Id</td>
+                <td>${instTemp.id_inst}</td>
             </tr>
-            <%
-            for(Nino nino : ninoListJSP) {
-            %>
             <tr>
-                <td><%=nino.getid_nino()%></td>
-                <td><%=nino.getnombre_nino()%></td>
-                <td><%=nino.getap_nino()%></td>                                               
-                <td><%=nino.getam_nino()%></td>                                               
-                <td><%=nino.getedad_cron()%></td>                                               
-                <td><%=nino.getmodeloplayera_nino()%></td>                                               
-                <td><%=nino.gettallaplayera_nino()%></td>
-
-                
-               <!-- 
-                <td><%=nino.getid_inst()%></td>                                               
-                <td><%=nino.getid_res()%></td>                                               
-                <td><%=nino.getid_con()%></td>                                               
-                <td><%=nino.getid_det()%></td>
-                -->                                              
-
-
+                <td>Nombre</td>
+                <td>${instTemp.nombre_inst}</td>
             </tr>
-        <%
-            }   
-        %>
-            
+            <tr>
+                <td>Teléfono</td>
+                <td>${instTemp.tel_inst}</td>
+            </tr>
+            <tr>
+                <td>Máximo de Niños</td>
+                <td>${instTemp.max_ninos_inst}</td>
+            </tr>
+        </table> 
+           
+        <br>    
+        <h5>Director</h5>
+        <table cellspacing="5" cellpadding="5" border="1">    
+            <tr>
+                <td>Nombre</td>
+                <td>${instTemp.nombre_dir}</td>
+            </tr>
+            <tr>
+                <td>Apellido Paterno</td>
+                <td>${instTemp.ap_dir}</td>
+            </tr>
+            <tr>
+                <td>Apellido Materno</td>
+                <td>${instTemp.am_dir}</td>
+            </tr>
+            <tr>
+                <td>Celular</td>
+                <td>${instTemp.cel_dir}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>${instTemp.email_dir}</td>
+            </tr>
         </table>
+        
+        <br>    
+        <h5>Dirección</h5>
+        <table cellspacing="5" cellpadding="5" border="1">              
+            <tr>
+                <td>Calle</td>
+                <td>${instTemp.calle_inst}</td>
+            </tr>
+            <tr>
+                <td>Numero</td>
+                <td>${instTemp.numero_inst}</td>
+            </tr>
+            <tr>
+                <td>Colonia</td>
+                <td>${instTemp.colonia_inst}</td>
+            </tr>
+            <tr>
+                <td>Ciudad</td>
+                <td>${instTemp.ciudad_inst}</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>${instTemp.estado_inst}</td>
+            </tr>
+            <tr>
+                <td>Código Postal</td>
+                <td>${instTemp.cp_inst}</td>
+            </tr>
+        </table>   
+            
+        <br>    
+        <!--
+        <h5>Responsable</h5>
+        <table cellspacing="5" cellpadding="5" border="1">  
+            <tr>
+                <td>Nombre</td>
+                <td>${resTemp.nombre_res}</td>
+            </tr>
+                        <tr>
+                <td>Apellido Paterno</td>
+                <td>${resTemp.ap_res}</td>
+            </tr>
+            <tr>
+                <td>Apellido Materno</td>
+                <td>${resTemp.am_res}</td>
+            </tr>
+            <tr>
+                <td>Celular</td>
+                <td>${resTemp.cel_res}</td>
+            </tr>
+        </table>-->
+            <br>    
+       
+        <a href="mininos.jsp"><button>Lista de Niños</button></a>
 
 </div><!-- col-md-6-->
 
@@ -187,7 +203,7 @@
 <div class="row">
 <div class="col-md-12">
 
-<p>Â©2014 DAW- Arely, Rolando y Carlos</p>
+<p>©2014 DAW- Arely, Rolando y Carlos</p>
 
 <ul>
 <li><a href="https://www.facebook.com/supercompucampo.itesm" target="_blank"><i class="fa fa-facebook"></i></a></li>

@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Institucion;
+import Model.Nino;
 import Model.Responsable;
 import dataAccess.ConnectionDB;
 import dataAccess.InstDAO;
@@ -59,6 +60,18 @@ public class InstServlet extends HttpServlet {
             request.setAttribute("resTemp", resNuevo);
             address = "displayNewInst.jsp";
         }
+        else if (opcion==2)
+         {
+         int id_inst =Integer.parseInt(request.getParameter("id_inst"));
+            Institucion instNueva = dao.searchInst (id_inst);
+            if (instNueva ==null){
+                address = "noregistrado.jsp";
+            }
+            else{
+                address = "editarinst.jsp";
+            }
+            request.setAttribute("instTemp", instNueva);
+         }
         /*else if (opcion==2)
          {
          String email = request.getParameter("email");
@@ -83,6 +96,28 @@ public class InstServlet extends HttpServlet {
          request.setAttribute("institucionList", userListServelet);
          address="miinstitucion2.jsp";   
          }
+        else if (opcion == 4)
+        {
+            String nombre_inst = request.getParameter("nombre_inst");
+            String calle_inst = request.getParameter("calle_inst");
+            int numero_inst = Integer.parseInt(request.getParameter("numero_inst"));
+            String colonia_inst = request.getParameter("colonia_inst");
+            int cp_inst = Integer.parseInt(request.getParameter("cp_inst"));
+            String ciudad_inst = request.getParameter("ciudad_inst");
+            String estado_inst = request.getParameter("estado_inst");
+            String tel_inst = request.getParameter("tel_inst");
+            int max_ninos_inst = Integer.parseInt(request.getParameter("max_ninos_inst"));
+            String nombre_dir = request.getParameter("nombre_dir");
+            String ap_dir = request.getParameter("ap_dir");
+            String am_dir = request.getParameter("am_dir");
+            String cel_dir = request.getParameter("cel_dir");
+            String email_dir = request.getParameter("email_dir");
+
+            Institucion instNueva = new Institucion (nombre_inst, calle_inst,numero_inst, colonia_inst, cp_inst, ciudad_inst, estado_inst,tel_inst, max_ninos_inst, nombre_dir,ap_dir,am_dir,cel_dir,email_dir);
+            dao.updateInst(instNueva);
+            request.setAttribute("instTemp", instNueva);
+            address = "displayEditedInst.jsp";
+        }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
         dispatcher.forward(request, response);
