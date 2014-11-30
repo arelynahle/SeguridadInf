@@ -7,6 +7,19 @@ public class Contacto {
 
     public Contacto(String hospital_con, String parentesco_con, String nombre_con, String tel_con, String cel_con, String of_con) {
 
+        //this.id_con = id_con;
+        this.hospital_con = hospital_con;
+        this.parentesco_con = parentesco_con;
+        this.nombre_con = nombre_con;
+        this.tel_con = tel_con;
+        this.cel_con = cel_con;
+        this.of_con = of_con;
+
+    }
+    
+    //constructor para el update de tabla contacto
+     public Contacto(int id_con, String hospital_con, String parentesco_con, String nombre_con, String tel_con, String cel_con, String of_con) {
+
         this.id_con = id_con;
         this.hospital_con = hospital_con;
         this.parentesco_con = parentesco_con;

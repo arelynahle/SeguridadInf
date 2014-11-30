@@ -1,5 +1,7 @@
 
 <%@page import="Model.Nino"%>
+<%@page import="Model.Contacto"%>
+<%@page import="Model.Detalle"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -99,6 +101,7 @@
                     <fieldset>      
                         <input name="id_nino" value="${ninoTemp.id_nino}" type="hidden"size="20" />
                         <input name="id_nino" value="${detTemp.id_det}" type="hidden"size="20" />
+                        <input name="id_nino" value="${conTemp.id_con}" type="hidden"size="20" />
 
                         
                         <legend>Datos generales</legend>
@@ -115,7 +118,7 @@
                         <input name= "edad_cron" value="${ninoTemp.edad_cron}" type="number" id="edad_cron"><br><br>
                      
                         <label for="edadMental">Edad Mental: &nbsp;</label>
-                        <input name= "edad_men_det" value="22" type="number" id="edadMental"><br><br>
+                        <input name= "edad_men_det" value="${detTemp.edad_men_det}" type="number" id="edadMental"><br><br>
                         
                         <label for="id_inst">Institución ID: &nbsp;</label>
                         <input name= "id_inst" type="number" id="id_inst"><br><br>
@@ -124,7 +127,11 @@
                         <input name= "id_res" type="number" id="id_res"><br><br>
                         
                         <label for="id_det">Detalles ID: &nbsp;</label>
-                        <input name= "id_det" type="number" id="id_det"><br><br>                        
+                        <input name= "id_det" type="number" id="id_det"><br><br>  
+                        
+                        <label for="id_con">Contacto ID: &nbsp;</label>
+                        <input name= "id_con" type="number" id="id_con"><br><br>                        
+                        
                         
                         
                         <label>Escolaridad:</label><br>
@@ -161,19 +168,20 @@
                     <fieldset>
                         <legend>En caso de emergencia, </legend>
                       <label>¿Cuál sería el hospital más adecuado para trasladarlo?</label>
-                        <input name="hospital_con" value="Angeles" type="text"size="40" /><br><br>
+                        <input name="hospital_con" value="${conTemp.hospital_con}" type="text"size="40" id="hospital_con" /><br><br>
+                       
                         <label>Llamar a: </label><br>
                         <input type="radio" name="parentesco_con" value="papa"> <label><strong>Papá</strong></label><br>
                         <input type="radio" name="parentesco_con" value="mama"> <label><strong>Mamá</strong></label><br>
                         <input type="radio" name="parentesco_con" value="otro"> <label><strong>Otro:&nbsp </strong></label><br><br>
                         <label for ="nombre_con"<strong>Nombre: &nbsp;<strong></label>
-                        <input name="nombre_con" value="Arely" type="text" size="40"/><br><br>
+                        <input name="nombre_con" value="${conTemp.nombre_con}" type="text" id="nombre_con" size="40"/><br><br>
                         <label for="telefono"><strong>Telefono:&nbsp;<strong></label>
-                        <input name="tel_con" value="8717321111" type="text"size="40"/><br><br>
+                        <input name="tel_con" value="${conTemp.tel_con}" type="text" id="tel_con"size="40"/><br><br>
                         <label for="celular"><strong>Celular:&nbsp;<strong></label>
-                        <input name="cel_con" value="87173212" type="text"size="40"/><br><br>
+                                    <input name="cel_con" value="${conTemp.cel_con}" type="text" id="cel_con"  size="40"/><br><br>
                         <label for="oficina"><strong>Oficina:&nbsp;<strong></label>
-                        <input name="of_con" value="8717321113" type="text"size="40"/><br><br>
+                        <input name="of_con" value="${conTemp.of_con}" type="text" id="of_con" size="40"/><br><br>
                   </fieldset>
                   <!--fieldset>
                     <label for="responsable"><strong>Responsable de la institución:&nbsp;<strong></label>

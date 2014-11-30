@@ -81,6 +81,53 @@ public class NinoDAO {
         }
     }
 
+    
+    public void updateDet(Detalle detalle) {
+        try {
+            statement = connection.prepareStatement("UPDATE detalle SET discapacidad_det=? ,edad_men_det=? ,escolaridad_det=? ,tratamiento_det=? ,silla_det=? WHERE id_det =?");
+            synchronized (statement) {
+                statement.setString(1, detalle.getdiscapacidad_det());
+                statement.setInt(2, detalle.getedad_men_det());
+                statement.setString(3, detalle.getescolaridad_det());
+                statement.setString(4, detalle.gettratamiento_det());
+                statement.setString(5, detalle.getsilla_det());
+                statement.setInt(6,detalle.getid_det());
+                statement.executeUpdate();
+            }
+            statement.close();
+        } catch (SQLException sqle) {
+            System.out.println(sqle);
+        }
+    }
+    
+    
+    public void updateCon(Contacto contacto) {
+        try {
+            statement = connection.prepareStatement("UPDATE contacto SET hospital_con=? ,parentesco_con=? ,nombre_con=? ,tel_con=? ,cel_con=?,of_con=? WHERE id_con =?");
+            synchronized (statement) {
+                statement.setString(1, contacto.gethospital_con());
+                statement.setString(2, contacto.getparentesco_con());
+                statement.setString(3, contacto.getnombre_con());
+                statement.setString(4, contacto.gettel_con());
+                statement.setString(5, contacto.getcel_con());
+                statement.setString(6,contacto.getof_con());
+                statement.setInt(7,contacto.getid_con());
+                statement.executeUpdate();
+            }
+            statement.close();
+        } catch (SQLException sqle) {
+            System.out.println(sqle);
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*public Nino deleteNino(int nombre_nino) {
         try {
             statement = connection.prepareStatement("DELETE FROM nino WHERE nombre_nino = ?");
