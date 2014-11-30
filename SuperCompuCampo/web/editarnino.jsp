@@ -1,4 +1,3 @@
-
 <%@page import="Model.Nino"%>
 <%@page import="Model.Contacto"%>
 <%@page import="Model.Detalle"%>
@@ -120,7 +119,7 @@
                         <label for="edadMental">Edad Mental: &nbsp;</label>
                         <input name= "edad_men_det" value="${detTemp.edad_men_det}" type="number" id="edadMental"><br><br>
                         
-                        <!--<label for="id_inst">Institución ID: &nbsp;</label>
+                        <label for="id_inst">Institución ID: &nbsp;</label>
                         <input name= "id_inst" type="number" id="id_inst"><br><br>
 
                         <label for="id_res">Responsable ID: &nbsp;</label>
@@ -188,8 +187,7 @@
                     <input name="responsable" type="text"size="40"/><br><br>
                     <label for="responsablecelular"><strong>Celular: &nbsp;<strong></label>
                     <input name="responsablecelular" type="text"size="40"/><br><br>
-                  </fields1et-->
-               
+                  </fieldset-->
 
                     <legend>Playera: </legend>
                     <label>Tipo</label><br>

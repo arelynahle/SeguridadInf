@@ -121,7 +121,7 @@
         </table>
           
         <br>  
-         <!-- 
+         
         <h5>Detalle</h5>
         <table cellspacing="5" cellpadding="5" border="1">   
             <tr>
@@ -175,7 +175,7 @@
             </tr>             
         </table>
        
-        <br>-->    
+        <br>
        
         <a href="mininos.jsp"><button>Lista de Niños</button></a>
 

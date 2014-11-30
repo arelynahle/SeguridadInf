@@ -107,7 +107,7 @@ public class NinoServlet extends HttpServlet {
             // int id_det = Integer.parseInt(request.getParameter("id_det"));
             
             int id_det = Integer.parseInt(request.getParameter("id_det"));
-           String discapacidad_det = request.getParameter("discapacidad_det");
+            String discapacidad_det = request.getParameter("discapacidad_det");
             int edad_men_det = Integer.parseInt(request.getParameter("edad_men_det"));
             String escolaridad_det = request.getParameter("escolaridad_det");
             String tratamiento_det = request.getParameter("tratamiento_det");
