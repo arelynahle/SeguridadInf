@@ -89,6 +89,19 @@
 <a href="miinstitucion.jsp"><button>Regresar</button></a>
 <br>
 <br>
+        <form action="InstServlet" method="get">
+            <table cellspacing="5" border="0">
+                <tr>
+                    <td align="right">Id:</td>
+                    <td><input type="text" name="id_inst"></td>
+                    <td><input type="submit" value="Editar"></td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" value="2" name="opcion" /></td>
+                </tr>
+            </table>
+        </form>
+
 
 <h3 class="widgettitle">Datos Generales</h3>
 
@@ -182,9 +195,7 @@
         %>
             
         </table>
-        <br>
-        <br>
-        <a href="editarinst.jsp"><button>Editar Información</button></a>
+
 </div><!-- col-md-6-->
 
 </div><!--row-->
