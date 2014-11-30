@@ -137,10 +137,10 @@
                 <th>Edad cronológica</th>
                 <th>Modelo playera</th>
                 <th>Talla playera</th>
-                <!--<th>Institucion ID</th>                
+                <th>Institucion ID</th>                
                 <th>Responsable ID</th>
                 <th>Contacto ID</th>
-                <th>Detalles ID</th>-->
+                <th>Detalles ID</th>
             </tr>
             <%
             for(Nino nino : ninoListJSP) {
@@ -153,14 +153,11 @@
                 <td><%=nino.getedad_cron()%></td>                                               
                 <td><%=nino.getmodeloplayera_nino()%></td>                                               
                 <td><%=nino.gettallaplayera_nino()%></td>
-
-                
-               <!-- 
                 <td><%=nino.getid_inst()%></td>                                               
                 <td><%=nino.getid_res()%></td>                                               
                 <td><%=nino.getid_con()%></td>                                               
                 <td><%=nino.getid_det()%></td>
-                -->                                              
+                                                           
 
 
             </tr>

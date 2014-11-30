@@ -90,19 +90,19 @@
         <h5>Niño</h5>        
         <table cellspacing="5" cellpadding="5" border="1">
             <tr>
-                <td>Nombre</td>
+                <th>Nombre</th>
                 <td>${ninoTemp.nombre_nino}</td>
             </tr>
             <tr>
-                <td>Apellido Paterno</td>
+                <th>Apellido Paterno</th>
                 <td>${ninoTemp.ap_nino}</td>
             </tr>
             <tr>
-                <td>Apellido Materno</td>
+                <th>Apellido Materno</th>
                 <td>${ninoTemp.am_nino}</td>
             </tr>
             <tr>
-                <td>Edad</td>
+                <th>Edad</th>
                 <td>${ninoTemp.edad_cron}</td>
             </tr>
         </table>    
@@ -111,11 +111,11 @@
         <h5>Playera</h5>
         <table cellspacing="5" cellpadding="5" border="1">   
             <tr>
-                <td>Modelo Playera</td>
+                <th>Modelo Playera</th>
                 <td>${ninoTemp.modeloplayera_nino}</td>
             </tr>
             <tr>
-                <td>Talla Playera</td>
+                <th>Talla Playera</th>
                 <td>${ninoTemp.tallaplayera_nino}</td>
             </tr> 
         </table>
@@ -125,27 +125,27 @@
         <h5>Detalle</h5>
         <table cellspacing="5" cellpadding="5" border="1">   
             <tr>
-                <td>Discapacidad</td>
+                <th>Discapacidad</th>
                 <td>${detTemp.discapacidad_det}</td>
             </tr>
             <tr>
-                <td>Edad Mental</td>
+                <th>Edad Mental</th>
                 <td>${detTemp.edad_men_det}</td>
             </tr>
             <tr>
-                <td>Escolaridad</td>
+                <th>Escolaridad</th>
                 <td>${detTemp.escolaridad_det}</td>
             </tr>
             <tr>
-                <td>Tratamiento</td>
+                <th>Tratamiento</th>
                 <td>${detTemp.tratamiento_det}</td>
             </tr>    
             <tr>
-                <td>Silla</td>
+                <th>Silla</th>
                 <td>${detTemp.silla_det}</td>
             </tr> 
             <tr>
-                <td>Hospital</td>
+                <th>Hospital</th>
                 <td>${conTemp.hospital_con}</td>
             </tr>
         </table>
@@ -154,23 +154,23 @@
         <h5>En Caso de Emergencia:</h5>
         <table cellspacing="5" cellpadding="5" border="1">   
             <tr>
-                <td>Llamar a: </td>
+                <th>Llamar a: </th>
                 <td>${conTemp.parentesco_con}</td>
             </tr>              
             <tr>
-                <td>Nombre Contacto: </td>
+                <th>Nombre Contacto: </th>
                 <td>${conTemp.nombre_con}</td>
             </tr>    
             <tr>
-                <td>Telefono Contacto: </td>
+                <th>Telefono Contacto: </th>
                 <td>${conTemp.tel_con}</td>
             </tr>                
             <tr>
-                <td>Celular Contacto: </td>
+                <th>Celular Contacto: </th>
                 <td>${conTemp.cel_con}</td>
             </tr>  
              <tr>
-                <td>Oficina Contacto: </td>
+                <th>Oficina Contacto: </th>
                 <td>${conTemp.of_con}</td>
             </tr>             
         </table>

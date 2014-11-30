@@ -29,6 +29,7 @@ public class InstServlet extends HttpServlet {
         if (opcion == 1)
         {
             //Datos institución
+            
             String nombre_inst = request.getParameter("nombre_inst");
             String calle_inst = request.getParameter("calle_inst");
             int numero_inst = Integer.parseInt(request.getParameter("numero_inst"));
@@ -98,6 +99,7 @@ public class InstServlet extends HttpServlet {
          }
         else if (opcion == 4)
         {
+            int id_inst = Integer.parseInt(request.getParameter("id_inst"));
             String nombre_inst = request.getParameter("nombre_inst");
             String calle_inst = request.getParameter("calle_inst");
             int numero_inst = Integer.parseInt(request.getParameter("numero_inst"));
@@ -113,7 +115,7 @@ public class InstServlet extends HttpServlet {
             String cel_dir = request.getParameter("cel_dir");
             String email_dir = request.getParameter("email_dir");
 
-            Institucion instNueva = new Institucion (nombre_inst, calle_inst,numero_inst, colonia_inst, cp_inst, ciudad_inst, estado_inst,tel_inst, max_ninos_inst, nombre_dir,ap_dir,am_dir,cel_dir,email_dir);
+            Institucion instNueva = new Institucion (id_inst, nombre_inst, calle_inst,numero_inst, colonia_inst, cp_inst, ciudad_inst, estado_inst,tel_inst, max_ninos_inst, nombre_dir,ap_dir,am_dir,cel_dir,email_dir);
             dao.updateInst(instNueva);
             request.setAttribute("instTemp", instNueva);
             address = "displayEditedInst.jsp";

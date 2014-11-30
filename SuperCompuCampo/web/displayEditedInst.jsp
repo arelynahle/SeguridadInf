@@ -90,19 +90,19 @@
         <h5>Institución</h5>        
         <table cellspacing="5" cellpadding="5" border="1">
             <tr>
-                <td>Id</td>
+                <th>Id</th>
                 <td>${instTemp.id_inst}</td>
             </tr>
             <tr>
-                <td>Nombre</td>
+                <th>Nombre</th>
                 <td>${instTemp.nombre_inst}</td>
             </tr>
             <tr>
-                <td>Teléfono</td>
+                <th>Teléfono</th>
                 <td>${instTemp.tel_inst}</td>
             </tr>
             <tr>
-                <td>Máximo de Niños</td>
+                <th>Máximo de Niños</th>
                 <td>${instTemp.max_ninos_inst}</td>
             </tr>
         </table> 
@@ -111,23 +111,23 @@
         <h5>Director</h5>
         <table cellspacing="5" cellpadding="5" border="1">    
             <tr>
-                <td>Nombre</td>
+                <th>Nombre</th>
                 <td>${instTemp.nombre_dir}</td>
             </tr>
             <tr>
-                <td>Apellido Paterno</td>
+                <th>Apellido Paterno</th>
                 <td>${instTemp.ap_dir}</td>
             </tr>
             <tr>
-                <td>Apellido Materno</td>
+                <th>Apellido Materno</th>
                 <td>${instTemp.am_dir}</td>
             </tr>
             <tr>
-                <td>Celular</td>
+                <th>Celular</th>
                 <td>${instTemp.cel_dir}</td>
             </tr>
             <tr>
-                <td>Email</td>
+                <th>Email</th>
                 <td>${instTemp.email_dir}</td>
             </tr>
         </table>
@@ -136,27 +136,27 @@
         <h5>Dirección</h5>
         <table cellspacing="5" cellpadding="5" border="1">              
             <tr>
-                <td>Calle</td>
+                <th>Calle</th>
                 <td>${instTemp.calle_inst}</td>
             </tr>
             <tr>
-                <td>Numero</td>
+                <th>Número</th>
                 <td>${instTemp.numero_inst}</td>
             </tr>
             <tr>
-                <td>Colonia</td>
+                <th>Colonia</th>
                 <td>${instTemp.colonia_inst}</td>
             </tr>
             <tr>
-                <td>Ciudad</td>
+                <th>Ciudad</th>
                 <td>${instTemp.ciudad_inst}</td>
             </tr>
             <tr>
-                <td>Estado</td>
+                <th>Estado</th>
                 <td>${instTemp.estado_inst}</td>
             </tr>
             <tr>
-                <td>Código Postal</td>
+                <th>Código Postal</th>
                 <td>${instTemp.cp_inst}</td>
             </tr>
         </table>   
@@ -184,7 +184,7 @@
         </table>-->
             <br>    
        
-        <a href="mininos.jsp"><button>Lista de Niños</button></a>
+        <a href="miinstitucion.jsp"><button>Listo</button></a>
 
 </div><!-- col-md-6-->
 
