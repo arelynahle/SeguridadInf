@@ -128,11 +128,6 @@
                         
                         
                         <label>Escolaridad:</label><br>
-                          <!--select>
-                              <option name="escolaridad_det" value="preescolar">Preescolar</option>
-                              <option name="escolaridad_det" value="primaria">Primaria</option>
-                              <option name="escolaridad_det" value="secundaria">Secundaria</option>
-                          </select!-->
                         <input type="radio" name="escolaridad_det" value="preescolar"> <label>Preescolar</label><br>
                         <input type="radio" name="escolaridad_det" value="primaria"> <label>Primaria</label><br>
                         <input type="radio" name="escolaridad_det" value="secundaria"> <label>Secundaria</label><br>
@@ -141,13 +136,13 @@
                          <br><br>
 
                         <label>Discapacidad: </label><br>
-                        <input type="checkbox" name="discapacidad_det" value="sindromeDown"> <label>Síndrome de Down</label><br>
-                        <input type="checkbox" name="discapacidad_det" value="problemaNeuromotor">  <label>Problemas Neuromotores</label><br>
-                        <input type="checkbox" name="discapacidad_det" value="deficienciaMental">  <label>Deficiencia Mental</label><br>
-                        <input type="checkbox" name="discapacidad_det" value="silente">  <label>Silente</label><br>
-                        <input type="checkbox" name="discapacidad_det" value="paralisisCerebral">  <label>Parálisis Cerebral</label><br>
-                        <input type="checkbox" name="discapacidad_det" value="autismo">  <label>Autismo</label><br>
-                        <input type="checkbox" name="discapacidad_det" value="otra">  <label>Otra</label><br><br>
+                        <input type="radio" name="discapacidad_det" value="sindromeDown"> <label>Síndrome de Down</label><br>
+                        <input type="radio" name="discapacidad_det" value="problemaNeuromotor">  <label>Problemas Neuromotores</label><br>
+                        <input type="radio" name="discapacidad_det" value="deficienciaMental">  <label>Deficiencia Mental</label><br>
+                        <input type="radio" name="discapacidad_det" value="silente">  <label>Silente</label><br>
+                        <input type="radio" name="discapacidad_det" value="paralisisCerebral">  <label>Parálisis Cerebral</label><br>
+                        <input type="radio" name="discapacidad_det" value="autismo">  <label>Autismo</label><br>
+                        <input type="radio" name="discapacidad_det" value="otra">  <label>Otra</label><br><br>
                     </fieldset>   
 
                     <fieldset>       
