@@ -128,21 +128,37 @@ public class NinoDAO {
         }
     }
     
-    /*public Nino deleteNino(int nombre_nino) {
+    public Nino deleteNino(int id_nino) {
+        Nino nino = null;
         try {
-            statement = connection.prepareStatement("DELETE FROM nino WHERE nombre_nino = ?");
-            statement.setInt(1, nombre_nino);
+            statement = connection.prepareStatement("DELETE FROM nino WHERE id_nino = ?");
+           statement.setInt(1, id_nino);
             // obtain user
             synchronized (statement) {
                 ResultSet results = statement.executeQuery();
-                // get rows data{
+		            // get rows data{
+
+                while (results.next()) {
+                    nino = new Nino();
+                    nino.setid_nino(results.getInt("id_nino"));
+                    nino.setnombre_nino(results.getString("nombre_nino"));
+                    nino.setap_nino(results.getString("ap_nino"));
+                    nino.setam_nino(results.getString("am_nino"));
+                    nino.setedad_cron(results.getInt("edad_cron"));
+                    nino.setmodeloplayera_nino(results.getString("modeloplayera_nino"));
+                    nino.settallaplayera_nino(results.getString("tallaplayera_nino"));
+                    nino.setid_inst(results.getInt("id_inst"));
+                    nino.setid_res(results.getInt("id_res"));
+                    nino.setid_con(results.getInt("id_con"));
+                    nino.setid_det(results.getInt("id_det"));
+                }
             }
             statement.close();
         } catch (SQLException sqle) {
             System.out.println(sqle);
         }
-        return nombre_nino;
-    }*/
+        return nino;
+    }
 
     public void addDet(Detalle detalle) {
         try {

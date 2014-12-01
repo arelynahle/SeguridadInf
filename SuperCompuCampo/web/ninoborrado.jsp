@@ -1,3 +1,7 @@
+<%@page import="Model.Nino"%>
+<%@page import="java.util.ArrayList"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -9,7 +13,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>Curso de Verano</title>
+<title>Niño no registrado</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -39,40 +43,21 @@
       <div class="row">
         <div class="col-md-12">
           <div class="clearfix">
-            <div id="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""/></a></div>
+            <div id="logo"><img class="img-responsive" src="images/logo.png"/></div>
             
             <nav class="navbar navbar-custom" role="navigation">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
             </div>
             <div class="collapse navbar-collapse" id="collapse-navigation">
-                <ul class="nav menu-nav">
+            <ul class="nav menu-nav">
               
-                <li><a href="index.html">Inicio</a></li>
+                <li class="current_page_item"><a href="miinstitucion.jsp">Mi Institucion</a></li>
                 
-                <li><a href="about.html">Nosotros</a>
-                </li>
+                <li><a href="contact.html">Alta de Niños</a></li>
+        
                 
-                <li><a href="teachers.html">Equipo</a>
-                </li>
-                
-                <li><a href="patrocinadores.html">Patrocinadores</a>
-                </li>
-                
-                <li><a href="gallery-4col.html">Galería</a>
-               
-                </li>
-      		
-                <li class="current_page_item"><a>Eventos</a>
-                    <ul class="sub-menu">
-                        <li><a href="curso.html">Curso de Verano</a></li>
-                        <li><a href="posada.html">Posada</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="unete.html">Únete</a></li>
-                
-                 <li><a href="login.html">Log-in</a></li>
+                 <li><a href="index.html">Salir</a></li>
             </ul>
             </div><!-- /.navbar-collapse -->
             
@@ -88,135 +73,33 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Curso de Verano</h2>
+	<h2 class="page-section-title">Error</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
 
-<div class="page-content wrap">
+<section class="page-content wrap">
 
 <div class="container">
 
 <div class="row">
 
-<div class="col-sm-7 col-md-8">
-
-<article class="single-event">
-
-<img class="img-responsive margin-b32" src="images/curso.jpg" alt="" />
-
-<h4>Verano 2014</h4>
-
-<p>Durante el curso de verano del SuperCompucampo se organizan diversas actividades para niños con discapacidades físicas o mentales, que permitirán el desarrollo de ciertas habilidades y capacidades. Así también se realizan actividades que den momentos de diversión a los niños y las niñas y permitir la inclusión con actividades como la coronación, y la mini olimpiada.</p>
-
-<br>
-<br>
-</article><!-- blog-post-->
-
-</div><!-- col-md-8-->
-
-<div class="col-sm-5 col-md-4">
-
-<div class="contact-right">
-
-<h5 class="widgettitle">Detalles del Evento:</h5>
-
-<ul class="event-meta">
-<li><i class="fa fa-calendar"></i>26 de Mayo - 6 de Junio</li>
-<li><i class="fa fa-clock-o"></i> 10:00-13:00</li>
-<li><i class="fa fa-map-marker"></i>Paseo del Tecnológico 751, Ampliación La Rosita Torreón, 27250 Torreón, COAH</li>
-<li><i class="fa fa-phone"></i>01 871 729 6363</li>
-</ul>
-
-</div><!--.contact-right-->
-
-</div><!--.col-md-4-->
-
-</div><!-- row-->
-<div class="row">
+<div class="col-sm-6 col-md-6">
     
-<h3 class="widgettitle" align="center">Clases</h3>
+<h5 class="widgettitle">Niño eliminado satisfactoriamente</h5>    
 
-<div class="col-sm-7 col-lg-1 margin-t54">
-
-</div><!-- col-lg-3-->
-
-</div><!--row-->
-
-<div class="row albums-holder">
-<div class="row albums-holder">
-
-
-<div class="col-md-1 gallery">
-<figure>
-<img class="img-responsive" src="images/clases/class-1.png" alt="">
-</figure>
-<h6 align="center">Natación</h6>
+<a href="NinoServlet?opcion=3"><button>Regresar</button></a>
 <br>
-<div></div>
-</div><!--end col-md-3-->
-
-<div class="col-md-1 gallery">
-<figure>
-<img class="img-responsive" src="images/clases/class-2.png" alt="">
-</figure>
-<h6 align="center">Baile</h6>
 <br>
-<div></div>
-</div><!--end col-md-1-->
 
-<div class="col-md-1 gallery">
-<figure>
-<img class="img-responsive" src="images/clases/class-3.png" alt="">
-</figure>
-<h6 align="center">Canto</h6>
-<br>
-<div></div>
-</div><!--end col-md-1-->
 
-<div class="col-md-1 gallery">
-<figure>
-<img class="img-responsive" src="images/clases/class-4.png" alt="">
-</figure>
-<h6 align="center">Teatro</h6>
-<br>
-<div></div>
-</div><!--end col-md-1-->
-
-<div class="col-md-1 gallery">
-<figure>
-<img class="img-responsive" src="images/clases/class-5.png" alt="">
-</figure>
-<h6 align="center">Deportes</h6>
-<br>
-<div></div>
-</div><!--end col-md-1-->
-
-<div class="col-md-1 gallery">
-<figure>
-<img class="img-responsive" src="images/clases/class-6.png" alt="">
-</figure>
-<h6 align="center">Manualidades</h6>
-<br>
-<div></div>
-</div><!--end col-md-1-->
-
-<div class="col-md-1 gallery">
-<figure>
-<img class="img-responsive" src="images/clases/class-7.png" alt="">
-</figure>
-<h6 align="center">Computación</h6>
-<br>
-<div></div>
-</div><!--end col-md-1-->
-
-</div><!--end col-md-2-->
+</div><!-- col-md-6-->
 
 </div><!--row-->
 
 </div><!-- container-->
 
-</div><!-- page-content-->
+</section><!-- page-content-->
 
 <div class="zz-top-foo"></div>
 <footer class="wrap">

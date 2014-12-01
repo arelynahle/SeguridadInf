@@ -148,7 +148,7 @@
                         <input type="radio" name="discapacidad_det" value="silente">  <label>Silente</label><br>
                         <input type="radio" name="discapacidad_det" value="paralisisCerebral">  <label>Parálisis Cerebral</label><br>
                         <input type="radio" name="discapacidad_det" value="autismo">  <label>Autismo</label><br>
-                        <input type="radio" name="discapacidad_det" value="otra">  <label>Otra</label><br><br>
+                        
                     </fieldset>   
 
                     <fieldset>       
@@ -172,7 +172,7 @@
                         <label>Llamar a: </label><br>
                         <input type="radio" name="parentesco_con" value="papa"> <label><strong>Papá</strong></label><br>
                         <input type="radio" name="parentesco_con" value="mama"> <label><strong>Mamá</strong></label><br>
-                        <input type="radio" name="parentesco_con" value="otro"> <label><strong>Otro:&nbsp </strong></label><br><br>
+                 
                         <label for ="nombre_con"<strong>Nombre: &nbsp;<strong></label>
                         <input name="nombre_con" value="${conTemp.nombre_con}" type="text" id="nombre_con" size="40"/><br><br>
                         <label for="telefono"><strong>Telefono:&nbsp;<strong></label>
