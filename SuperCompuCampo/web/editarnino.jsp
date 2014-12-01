@@ -98,43 +98,43 @@
                     <h4>Llena los siguientes campos, por favor.</h4>
 
                     <fieldset>      
-                        <input name="id_nino" value="${ninoTemp.id_nino}" type="hidden"size="20" />
+                        <input name="id_nino" value="${ninoTemp.id_nino}" type="hidden"size="20"/>
                         <input name="id_nino" value="${detTemp.id_det}" type="hidden"size="20" />
                         <input name="id_nino" value="${conTemp.id_con}" type="hidden"size="20" />
 
                         
                         <legend>Datos generales</legend>
                         <label for="nombre_nino"><strong>Nombre(s): &nbsp;<strong></label>                      
-                        <input name="nombre_nino" value="${ninoTemp.nombre_nino}" type="text"size="20" /><br><br>                        
+                        <input name="nombre_nino" value="${ninoTemp.nombre_nino}" type="text"size="20" required/><br><br>                        
                         
                         <label for="ap_nino"><strong>Apellido Paterno: &nbsp;<strong></label>
-                        <input name="ap_nino" value="${ninoTemp.ap_nino}" type="text"size="20" /><br><br>
+                        <input name="ap_nino" value="${ninoTemp.ap_nino}" type="text"size="20" required/><br><br>
                         
                         <label for="am_nino"><strong>Apellido Materno: &nbsp;<strong></label>
-                        <input name="am_nino" value="${ninoTemp.am_nino}" type="text"size="20" /><br><br>
+                        <input name="am_nino" value="${ninoTemp.am_nino}" type="text"size="20" required/><br><br>
         
                         <label for="edad_cron">Edad Cronológica: &nbsp;</label>
-                        <input name= "edad_cron" value="${ninoTemp.edad_cron}" type="number" id="edad_cron"><br><br>
+                        <input name= "edad_cron" value="${ninoTemp.edad_cron}" type="number" id="edad_cron" required><br><br>
                      
                         <label for="edadMental">Edad Mental: &nbsp;</label>
-                        <input name= "edad_men_det" value="${detTemp.edad_men_det}" type="number" id="edadMental"><br><br>
+                        <input name= "edad_men_det" value="${detTemp.edad_men_det}" type="number" id="edadMental" required><br><br>
                         
                         <label for="id_inst">Institución ID: &nbsp;</label>
-                        <input name= "id_inst" value="${ninoTemp.id_inst}" type="number" id="id_inst"><br><br>
+                        <input name= "id_inst" value="${ninoTemp.id_inst}" type="number" id="id_inst" required><br><br>
 
                         <label for="id_res">Responsable ID: &nbsp;</label>
-                        <input name= "id_res" value="${ninoTemp.id_res}" type="number" id="id_res"><br><br>
+                        <input name= "id_res" value="${ninoTemp.id_res}" type="number" id="id_res" required><br><br>
                         
                         <label for="id_det">Detalles ID: &nbsp;</label>
-                        <input name= "id_det" value="${ninoTemp.id_det}" type="number" id="id_det"><br><br>  
+                        <input name= "id_det" value="${ninoTemp.id_det}" type="number" id="id_det" required><br><br>  
                         
                         <label for="id_con">Contacto ID: &nbsp;</label>
-                        <input name= "id_con" value="${ninoTemp.id_con}" type="number" id="id_con"><br><br>                        
+                        <input name= "id_con" value="${ninoTemp.id_con}" type="number" id="id_con" required><br><br>                        
                         
                         
                         
                         <label>Escolaridad:</label><br>
-                        <input type="radio" name="escolaridad_det" value="preescolar"> <label>Preescolar</label><br>
+                        <input type="radio" name="escolaridad_det" value="preescolar" required> <label>Preescolar</label><br>
                         <input type="radio" name="escolaridad_det" value="primaria"> <label>Primaria</label><br>
                         <input type="radio" name="escolaridad_det" value="secundaria"> <label>Secundaria</label><br>
 
@@ -142,7 +142,7 @@
                          <br><br>
 
                         <label>Discapacidad: </label><br>
-                        <input type="radio" name="discapacidad_det" value="sindromeDown"> <label>Síndrome de Down</label><br>
+                        <input type="radio" name="discapacidad_det" value="sindromeDown" required> <label>Síndrome de Down</label><br>
                         <input type="radio" name="discapacidad_det" value="problemaNeuromotor">  <label>Problemas Neuromotores</label><br>
                         <input type="radio" name="discapacidad_det" value="deficienciaMental">  <label>Deficiencia Mental</label><br>
                         <input type="radio" name="discapacidad_det" value="silente">  <label>Silente</label><br>
@@ -154,11 +154,11 @@
                     <fieldset>       
                         <legend>Datos médicos: </legend>
                     <label>¿Está bajo tratamiento médico?</label><br>
-                        <input type="radio" name="tratamiento_det" value="si"> <label><strong>Sí</strong></label><br>
+                        <input type="radio" name="tratamiento_det" value="si" required> <label><strong>Sí</strong></label><br>
                        <input type="radio" name="tratamiento_det" value="no"> <label><strong>No</strong></label><br><br>
 
                        <label>¿Usa silla de ruedas?</label><br>
-                       <input type="radio" name="silla_det" value="si"> <label><strong>Sí</strong></label><br>
+                       <input type="radio" name="silla_det" value="si" required> <label><strong>Sí</strong></label><br>
                        <input type="radio" name="silla_det" value="no"> <label><strong>No</strong></label><br><br>
 
 
@@ -167,20 +167,20 @@
                     <fieldset>
                         <legend>En caso de emergencia, </legend>
                       <label>¿Cuál sería el hospital más adecuado para trasladarlo?</label>
-                        <input name="hospital_con" value="${conTemp.hospital_con}" type="text"size="40" id="hospital_con" /><br><br>
+                        <input name="hospital_con" value="${conTemp.hospital_con}" type="text"size="40" id="hospital_con" required/><br><br>
                        
                         <label>Llamar a: </label><br>
-                        <input type="radio" name="parentesco_con" value="papa"> <label><strong>Papá</strong></label><br>
+                        <input type="radio" name="parentesco_con" value="papa" required> <label><strong>Papá</strong></label><br>
                         <input type="radio" name="parentesco_con" value="mama"> <label><strong>Mamá</strong></label><br>
                  
                         <label for ="nombre_con"<strong>Nombre: &nbsp;<strong></label>
-                        <input name="nombre_con" value="${conTemp.nombre_con}" type="text" id="nombre_con" size="40"/><br><br>
+                        <input name="nombre_con" value="${conTemp.nombre_con}" type="text" id="nombre_con" size="40" required/><br><br>
                         <label for="telefono"><strong>Telefono:&nbsp;<strong></label>
-                        <input name="tel_con" value="${conTemp.tel_con}" type="text" id="tel_con"size="40"/><br><br>
+                        <input name="tel_con" value="${conTemp.tel_con}" type="text" id="tel_con"size="40" required/><br><br>
                         <label for="celular"><strong>Celular:&nbsp;<strong></label>
-                                    <input name="cel_con" value="${conTemp.cel_con}" type="text" id="cel_con"  size="40"/><br><br>
+                                    <input name="cel_con" value="${conTemp.cel_con}" type="text" id="cel_con"  size="40" required/><br><br>
                         <label for="oficina"><strong>Oficina:&nbsp;<strong></label>
-                        <input name="of_con" value="${conTemp.of_con}" type="text" id="of_con" size="40"/><br><br>
+                        <input name="of_con" value="${conTemp.of_con}" type="text" id="of_con" size="40" required/><br><br>
                   </fieldset>
                   <!--fieldset>
                     <label for="responsable"><strong>Responsable de la institución:&nbsp;<strong></label>
@@ -191,10 +191,10 @@
 
                     <legend>Playera: </legend>
                     <label>Tipo</label><br>
-                    <input type="radio" name="modeloplayera_nino" value="nino"> <label><strong>Niño</strong>&nbsp;&nbsp</label>
+                    <input type="radio" name="modeloplayera_nino" value="nino" required> <label><strong>Niño</strong>&nbsp;&nbsp</label>
                     <input type="radio" name="modeloplayera_nino" value="adulto"> <label><strong>Adulto</strong>&nbsp;&nbsp</label><br><br>
                     <label>Modelo</label><br>
-                    <input type="radio" name="tallaplayera_nino" value="ch"> <label><strong>CH</strong>&nbsp;&nbsp</label>
+                    <input type="radio" name="tallaplayera_nino" value="ch" required> <label><strong>CH</strong>&nbsp;&nbsp</label>
                     <input type="radio" name="tallaplayera_nino" value="m"> <label><strong>M</strong>&nbsp;&nbsp</label>
                     <input type="radio" name="tallaplayera_nino" value="g"> <label><strong>G</strong>&nbsp;&nbsp</label>
                     <input type="radio" name="tallaplayera_nino" value="eg"> <label><strong>EG</strong>&nbsp;&nbsp</label><br><br>

@@ -97,58 +97,58 @@
                         
                         <legend>Datos generales</legend>
                         <label for="nombre_inst"><strong>Nombre(s): &nbsp;<strong></label>                      
-                        <input name="nombre_inst" value="${instTemp.nombre_inst}" type="text"size="20" /><br><br> 
+                        <input name="nombre_inst" value="${instTemp.nombre_inst}" type="text"size="20" required/><br><br> 
                         
                         
                         <label for="calle_inst"><strong>Calle: &nbsp;<strong></label>
-                        <input name="calle_inst" value="${instTemp.calle_inst}" type="text"size="20" /><br><br>
+                        <input name="calle_inst" value="${instTemp.calle_inst}" type="text"size="20" required/><br><br>
                         
                         <label for="numero_inst"><strong>Número: &nbsp;<strong></label>
-                        <input name="numero_inst" value="${instTemp.numero_inst}"  type="number"size="20" /><br><br>
+                        <input name="numero_inst" value="${instTemp.numero_inst}"  type="number"size="20" required/><br><br>
                   
                         <label for="colonia_inst"><strong>Colonia: &nbsp;<strong></label>
-                        <input name="colonia_inst" value="${instTemp.colonia_inst}" type="text"size="20" /><br><br>
+                        <input name="colonia_inst" value="${instTemp.colonia_inst}" type="text"size="20" required/><br><br>
                         
                         <label for="cp_inst"><strong>Código Postal: &nbsp;<strong></label>
-                        <input name="cp_inst" value="${instTemp.cp_inst}" type="number"size="20" /><br><br>
+                        <input name="cp_inst" value="${instTemp.cp_inst}" type="number"size="20" required/><br><br>
                         <%--<%=institucion.getcp_inst()%>--%>
                             
                         <label for="ciudad_inst"><strong>Ciudad: &nbsp;<strong></label>
-                        <input name="ciudad_inst" value="${instTemp.ciudad_inst}" type="text"size="20" /><br><br>
+                        <input name="ciudad_inst" value="${instTemp.ciudad_inst}" type="text"size="20" required/><br><br>
                         <%--<%=institucion.getciudad_inst()%>--%>
                             
                         <label for="estado_inst"><strong>Estado: &nbsp;<strong></label>
-                        <input name="estado_inst" value="${instTemp.estado_inst}" type="text"size="20" /><br><br>
+                        <input name="estado_inst" value="${instTemp.estado_inst}" type="text"size="20" required/><br><br>
                         <%--<%=institucion.getestado_inst()%>--%>
                         
                         <label for="tel_inst"><strong>Teléfono: &nbsp;<strong></label>
-                        <input name="tel_inst" value="${instTemp.tel_inst}" type="number"size="20" /><br><br> 
+                        <input name="tel_inst" value="${instTemp.tel_inst}" type="number"size="20" required/><br><br> 
                         <%--<%=institucion.gettel_inst()%>--%>
                             
                         <label for="max_ninos_inst"><strong>Máximo de Niños: &nbsp;<strong></label>
-                        <input name="max_ninos_inst" value="${instTemp.max_ninos_inst}" type="number"size="20" /><br><br> 
+                        <input name="max_ninos_inst" value="${instTemp.max_ninos_inst}" type="number"size="20" required/><br><br> 
                         <%--><%=institucion.getmax_ninos_inst()%>--%>
 
                     <fieldset>
                         <legend>Datos Director</legend>
                         <label for="nombre_dir"><strong>Nombre(s): &nbsp;<strong></label>
-                        <input name="nombre_dir" value="${instTemp.nombre_dir}" type="text"size="20" /><br><br>
+                        <input name="nombre_dir" value="${instTemp.nombre_dir}" type="text"size="20" required/><br><br>
                         <%--<%=institucion.getnombre_dir()%>--%>
                         
                         <label for="ap_dir"><strong>Apellido Paterno: &nbsp;<strong></label>
-                        <input name="ap_dir" value="${instTemp.ap_dir}" type="text"size="20" /><br><br>  
+                        <input name="ap_dir" value="${instTemp.ap_dir}" type="text"size="20" required/><br><br>  
                         <%--<%=institucion.getap_dir()%>--%>
                         
                         <label for="am_dir"><strong>Apellido Materno: &nbsp;<strong></label>
-                        <input name="am_dir" value="${instTemp.am_dir}" type="text"size="20" /><br><br>  
+                        <input name="am_dir" value="${instTemp.am_dir}" type="text"size="20" required/><br><br>  
                         <%--<%=institucion.getam_dir()%>--%>
                         
                          <label for="cel_dir"><strong>Celular: &nbsp;<strong></label>
-                        <input name="cel_dir" value="${instTemp.cel_dir}" type="text"size="20" /><br><br> 
+                        <input name="cel_dir" value="${instTemp.cel_dir}" type="text"size="20" required/><br><br> 
                         <%--<%=institucion.getcel_dir()%>--%>
                                                                   
                          <label for="email_dir"><strong>Email: &nbsp;<strong></label>
-                        <input name="email_dir" value="${instTemp.email_dir}" type="text"size="20" /><br><br> 
+                        <input name="email_dir" value="${instTemp.email_dir}" type="text"size="20" required/><br><br> 
                         <%--<%=institucion.getemail_dir()%>--%>
                     </fieldset>
                         
